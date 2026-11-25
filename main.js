@@ -77,4 +77,19 @@ form.addEventListener('submit', (e) => {
   form.querySelector('.form__note').textContent = '¡Gracias! Se ha abierto tu correo con la solicitud lista para enviar.';
 });
 
+// Legal: los enlaces del pie abren su apartado
+const openLegal = () => {
+  const d = document.getElementById(location.hash.slice(1));
+  if (d?.tagName === 'DETAILS') d.open = true;
+};
+addEventListener('hashchange', openLegal);
+openLegal();
+
+// «Configurar cookies»: reabre el aviso de consentimiento de Google (activarlo en AdSense → Privacidad y mensajes)
+document.querySelector('[data-cookies]').addEventListener('click', () => {
+  window.googlefc = window.googlefc || {};
+  googlefc.callbackQueue = googlefc.callbackQueue || [];
+  googlefc.callbackQueue.push(() => googlefc.showRevocationMessage?.());
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();

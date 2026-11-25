@@ -569,6 +569,23 @@ em.accent { font-style: italic; }
 .faq details[open]::details-content { block-size: auto; }
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-6px); } }
 
+/* ---------- LEGAL ---------- */
+.legal { padding-top: 40px; }
+.legal .head { margin-bottom: 36px; }
+.legal .head h2 { font-size: clamp(32px, 4vw, 44px); }
+.legal__body { padding-bottom: 26px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.faq .legal__body p { padding: 0; margin: 0 0 12px; font-size: 14px; }
+.legal__body h3 { margin: 22px 0 8px; color: var(--text); font-size: 15px; letter-spacing: -.01em; line-height: 1.3; }
+.legal__body ul { margin: 0 0 12px; padding-left: 18px; }
+.legal__body li { margin-bottom: 6px; }
+.legal__body strong { color: #d9d3d0; }
+.legal__body a { color: var(--orange-2); text-decoration: underline; text-underline-offset: 2px; }
+.legal__table { margin: 6px 0 14px; overflow-x: auto; }
+.legal__table table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 13px; }
+.legal__table th, .legal__table td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.legal__table th { color: var(--text); }
+.legal__updated { margin-top: 18px; color: var(--dim); font-size: 12.5px; }
+
 /* ---------- CONTACTO ---------- */
 .contact { overflow: hidden; }
 .form { display: grid; gap: 30px; }
@@ -635,7 +652,9 @@ em.accent { font-style: italic; }
 .footer { padding: 34px 0 40px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
 .footer__in { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
 .footer__in span { margin-right: auto; }
-.footer a:hover { color: var(--orange-2); }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.btn-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.footer a:hover, .btn-link:hover { color: var(--orange-2); }
 
 /* ---------- PLAYER ---------- */
 .player { width: min(1100px, 100% - 32px); padding: 0; border: 0; background: transparent; overflow: visible; opacity: 0; scale: .94; transition: opacity .4s var(--ease), scale .6s var(--ease), overlay .4s allow-discrete, display .4s allow-discrete; }
